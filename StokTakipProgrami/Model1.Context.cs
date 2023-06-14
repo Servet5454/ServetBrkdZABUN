@@ -26,5 +26,6 @@ namespace StokTakipProgrami
         }
     
         public virtual DbSet<Urun> Urun { get; set; }
+        public virtual DbSet<Terazi> Terazi { get; set; }
     }
 }
