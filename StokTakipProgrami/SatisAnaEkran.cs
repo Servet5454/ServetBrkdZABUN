@@ -16,6 +16,7 @@ namespace StokTakipProgrami
         {
             InitializeComponent();
         }
+        Database1Entities context = new Database1Entities();
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -96,7 +97,7 @@ namespace StokTakipProgrami
 
         }
 
-        private void tBarkod_KeyDown(object sender, KeyEventArgs e)
+        private void tBarkod_KeyDown(object sender, KeyEventArgs e) //Barkod enter
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -109,9 +110,61 @@ namespace StokTakipProgrami
                 }
                 else
                 {
+                   if(context.Urun.Any(p=>p.Barkod == barkod))
+                    {
+                        var urun =context.Urun.Where(p=>p.Barkod == barkod).FirstOrDefault();
+                        int satirsayisi =gridSatislistesi.Rows.Count;
+                        double miktar =Convert.ToDouble(tMiktar.Text);
+                        bool eklenmismi = false;
+                        if(satirsayisi > 0)
+                        {
+                            for (int i = 0; i < satirsayisi; i++)
+                            {
+                                if (gridSatislistesi.Rows[i].Cells["Barkod"].Value.ToString() == barkod)
+                                {
+                                    gridSatislistesi.Rows[i].Cells["Miktar"].Value = miktar +Convert.ToDouble(gridSatislistesi.Rows[i].Cells["Miktar"].Value);
+                                    gridSatislistesi.Rows[i].Cells["Toplam"].Value =Math.Round( Convert.ToDouble(gridSatislistesi.Rows[i].Cells["Miktar"].Value) * Convert.ToDouble(gridSatislistesi.Rows[i].Cells["Fiyat"].Value),2); //burada virgülden sonra 2 hane gözükmesi için yuvarlama yaptım...
+                                    eklenmismi |= true;
+                                }
 
+                            }
+                        }
+                        if( !eklenmismi)
+                        {
+                            gridSatislistesi.Rows.Add();
+                            gridSatislistesi.Rows[satirsayisi].Cells["Barkod"].Value = barkod;
+                            gridSatislistesi.Rows[satirsayisi].Cells["UrunAdi"].Value = urun.UrunAd;
+                            gridSatislistesi.Rows[satirsayisi].Cells["UrunGrup"].Value = urun.UrunGrup;
+                            gridSatislistesi.Rows[satirsayisi].Cells["Birim"].Value = urun.Birim;
+                            gridSatislistesi.Rows[satirsayisi].Cells["Fiyat"].Value = urun.SatisFiyat;
+                            gridSatislistesi.Rows[satirsayisi].Cells["Miktar"].Value = miktar;
+                            gridSatislistesi.Rows[satirsayisi].Cells["Toplam"].Value = Math.Round(miktar * (double)urun.SatisFiyat,2);
+                            gridSatislistesi.Rows[satirsayisi].Cells["AlisFiyat"].Value = urun.AlisFiyat;
+                            gridSatislistesi.Rows[satirsayisi].Cells["KdvTutari"].Value = urun.KdvTutari;
+
+                        }
+                    }
+                    
+
+
+                    
                 }
             }
+
+        }
+
+        private void tBarkod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tMiktar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tBarkod_TextChanged_1(object sender, EventArgs e)
+        {
 
         }
     }
