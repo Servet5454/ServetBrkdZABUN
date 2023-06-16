@@ -31,6 +31,12 @@ namespace StokTakipProgrami
         private void SatisAnaEkran_Load(object sender, EventArgs e) //Anasatış ekranının ilk yükleneceği yer burası
         {
             hizliButonUrunGetir(); //metodu çağıırıyoruz
+            b5.Text =5.ToString("C2");
+            b10.Text = 10.ToString("C2");
+            b20.Text = 20.ToString("C2");
+            b50.Text = 50.ToString("C2");
+            b100.Text = 100.ToString("C2");
+            b200.Text = 200.ToString("C2");
             
         }
 
@@ -277,6 +283,29 @@ namespace StokTakipProgrami
                 }
             }
         }
+        private void Numaratorx_Click(object sender,EventArgs e)
+        {
+            Button btn = (Button)sender;
+            if(btn.Text == ",")
+            {
+                int virgul = tNumarator.Text.Count(p => p == ',');
+                if(virgul < 1)
+                {
+                    tNumarator.Text += btn.Text;
+                }
+            }
+            else if(btn.Text == "<")
+            {
+                if (tNumarator.Text.Length > 0)
+                {
+                    tNumarator.Text =tNumarator.Text.Substring(0,tNumarator.Text.Length - 1);
+                }
+            }
+            else
+            {
+                tNumarator.Text+=btn.Text;
+            }
+        }
 
         private void HizliButtonClick(object sender,EventArgs e) //hızlı butona basılınca yapılaacak işlemler ortak hepsi birlikte
         {
@@ -293,11 +322,17 @@ namespace StokTakipProgrami
                 
                 var urunbarkod = context.HizliUrunler.Where(p => p.Id == butonid).Select(p => p.Barkod).FirstOrDefault();//burada ide si barkodid nosuna eşit olanı getir dedik ama select yaparak ne istediysek sadece onu aldık...
                 var urun = context.Urun.Where(p => p.Barkod == urunbarkod).FirstOrDefault();
-                UrunGetir(urun, urunbarkod, 1);
+                UrunGetir(urun, urunbarkod, Convert.ToDouble(tMiktar.Text));
                 GenelToplam();
 
             }
             
+        }
+        private void ParaUstuHesapla_Click(object sender,EventArgs e)
+        {
+            Button btn = (Button)sender;
+            double sonuc =Islemler.DoubleYap(btn.Text) - Islemler.DoubleYap(tGenelToplam.Text);
+            txtparaustu.Text = sonuc.ToString("C2");
         }
         #endregion
 
@@ -314,6 +349,53 @@ namespace StokTakipProgrami
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bAdet_Click(object sender, EventArgs e)
+        {
+            if(tNumarator.Text != "")
+            {
+                tMiktar.Text =tNumarator.Text;
+                tNumarator.Clear();
+                tBarkod.Clear();
+                tBarkod.Focus();
+
+            }
+        }
+
+        private void bOdenen_Click(object sender, EventArgs e)
+        {
+            if(tNumarator.Text != "")
+            {
+                double sonuc =Islemler.DoubleYap(tNumarator.Text) - Islemler.DoubleYap(tGenelToplam.Text);
+                txtparaustu.Text =sonuc.ToString("C2");
+                tNumarator.Clear();
+                tBarkod.Focus();
+              
+            }
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bBarkod_Click(object sender, EventArgs e)
+        {
+            if(tNumarator.Text != "")
+            {
+                if(context.Urun.Any(p=>p.Barkod == tNumarator.Text))
+                {
+                    var urun = context.Urun.Where(p=>p.Barkod == tNumarator.Text).FirstOrDefault();
+                    UrunGetir(urun,tNumarator.Text,Convert.ToDouble(tMiktar.Text));
+                    tNumarator.Clear();
+                    tBarkod.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("ürün ekleme sayfası");
+                }
+            }
         }
     }
 

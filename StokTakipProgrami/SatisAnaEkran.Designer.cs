@@ -118,11 +118,15 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tGenelToplam = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtparaustu = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtOdenen = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -143,6 +147,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // bNV
@@ -160,6 +166,7 @@
             this.bNV.TabIndex = 12;
             this.bNV.Text = ",";
             this.bNV.UseVisualStyleBackColor = false;
+            this.bNV.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -225,6 +232,7 @@
             this.bN0.TabIndex = 11;
             this.bN0.Text = "0";
             this.bN0.UseVisualStyleBackColor = false;
+            this.bN0.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bNB
             // 
@@ -241,6 +249,7 @@
             this.bNB.TabIndex = 10;
             this.bNB.Text = "<";
             this.bNB.UseVisualStyleBackColor = false;
+            this.bNB.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bN9
             // 
@@ -257,6 +266,7 @@
             this.bN9.TabIndex = 9;
             this.bN9.Text = "9";
             this.bN9.UseVisualStyleBackColor = false;
+            this.bN9.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bN8
             // 
@@ -273,6 +283,7 @@
             this.bN8.TabIndex = 8;
             this.bN8.Text = "8";
             this.bN8.UseVisualStyleBackColor = false;
+            this.bN8.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bN7
             // 
@@ -289,6 +300,7 @@
             this.bN7.TabIndex = 7;
             this.bN7.Text = "7";
             this.bN7.UseVisualStyleBackColor = false;
+            this.bN7.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bN6
             // 
@@ -305,6 +317,7 @@
             this.bN6.TabIndex = 6;
             this.bN6.Text = "6";
             this.bN6.UseVisualStyleBackColor = false;
+            this.bN6.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bN5
             // 
@@ -321,6 +334,7 @@
             this.bN5.TabIndex = 5;
             this.bN5.Text = "5";
             this.bN5.UseVisualStyleBackColor = false;
+            this.bN5.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bN4
             // 
@@ -337,6 +351,7 @@
             this.bN4.TabIndex = 4;
             this.bN4.Text = "4";
             this.bN4.UseVisualStyleBackColor = false;
+            this.bN4.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bN3
             // 
@@ -353,7 +368,7 @@
             this.bN3.TabIndex = 3;
             this.bN3.Text = "3";
             this.bN3.UseVisualStyleBackColor = false;
-            this.bN3.Click += new System.EventHandler(this.bN3_Click);
+            this.bN3.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bN2
             // 
@@ -370,7 +385,7 @@
             this.bN2.TabIndex = 2;
             this.bN2.Text = "2";
             this.bN2.UseVisualStyleBackColor = false;
-            this.bN2.Click += new System.EventHandler(this.bN2_Click);
+            this.bN2.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // bN1
             // 
@@ -387,7 +402,7 @@
             this.bN1.TabIndex = 1;
             this.bN1.Text = "1";
             this.bN1.UseVisualStyleBackColor = false;
-            this.bN1.Click += new System.EventHandler(this.bN1_Click);
+            this.bN1.Click += new System.EventHandler(this.Numaratorx_Click);
             // 
             // tNumarator
             // 
@@ -417,6 +432,7 @@
             this.b200.TabIndex = 5;
             this.b200.Text = "200";
             this.b200.UseVisualStyleBackColor = false;
+            this.b200.Click += new System.EventHandler(this.ParaUstuHesapla_Click);
             // 
             // b100
             // 
@@ -433,6 +449,7 @@
             this.b100.TabIndex = 4;
             this.b100.Text = "100";
             this.b100.UseVisualStyleBackColor = false;
+            this.b100.Click += new System.EventHandler(this.ParaUstuHesapla_Click);
             // 
             // b50
             // 
@@ -449,6 +466,7 @@
             this.b50.TabIndex = 3;
             this.b50.Text = "50";
             this.b50.UseVisualStyleBackColor = false;
+            this.b50.Click += new System.EventHandler(this.ParaUstuHesapla_Click);
             // 
             // b20
             // 
@@ -465,6 +483,7 @@
             this.b20.TabIndex = 2;
             this.b20.Text = "20";
             this.b20.UseVisualStyleBackColor = false;
+            this.b20.Click += new System.EventHandler(this.ParaUstuHesapla_Click);
             // 
             // b10
             // 
@@ -481,6 +500,7 @@
             this.b10.TabIndex = 1;
             this.b10.Text = "10";
             this.b10.UseVisualStyleBackColor = false;
+            this.b10.Click += new System.EventHandler(this.ParaUstuHesapla_Click);
             // 
             // b5
             // 
@@ -497,6 +517,7 @@
             this.b5.TabIndex = 0;
             this.b5.Text = "5";
             this.b5.UseVisualStyleBackColor = false;
+            this.b5.Click += new System.EventHandler(this.ParaUstuHesapla_Click);
             // 
             // tableLayoutPanel6
             // 
@@ -600,6 +621,7 @@
             this.bAdet.TabIndex = 8;
             this.bAdet.Text = "Adet";
             this.bAdet.UseVisualStyleBackColor = false;
+            this.bAdet.Click += new System.EventHandler(this.bAdet_Click);
             // 
             // button51
             // 
@@ -632,6 +654,7 @@
             this.bOdenen.TabIndex = 6;
             this.bOdenen.Text = "Ödenen";
             this.bOdenen.UseVisualStyleBackColor = false;
+            this.bOdenen.Click += new System.EventHandler(this.bOdenen_Click);
             // 
             // bIade
             // 
@@ -664,6 +687,7 @@
             this.bBarkod.TabIndex = 4;
             this.bBarkod.Text = "Barkod";
             this.bBarkod.UseVisualStyleBackColor = false;
+            this.bBarkod.Click += new System.EventHandler(this.bBarkod_Click);
             // 
             // bIslemBeklet
             // 
@@ -1532,8 +1556,8 @@
             this.tableLayoutPanel9.ColumnCount = 2;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel12, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(1, 41);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(1);
@@ -1543,29 +1567,6 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(240, 92);
             this.tableLayoutPanel9.TabIndex = 1;
             this.tableLayoutPanel9.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel9_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ödenen (F12)";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(123, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Para Üstü";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -1616,6 +1617,90 @@
             this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             this.dataGridViewImageColumn3.Width = 89;
             // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Controls.Add(this.txtOdenen, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(114, 86);
+            this.tableLayoutPanel10.TabIndex = 0;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.txtparaustu, 0, 1);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(123, 3);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(114, 86);
+            this.tableLayoutPanel12.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 40);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Para Üstü";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // txtparaustu
+            // 
+            this.txtparaustu.BackColor = System.Drawing.Color.Silver;
+            this.txtparaustu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtparaustu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtparaustu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtparaustu.Location = new System.Drawing.Point(1, 41);
+            this.txtparaustu.Margin = new System.Windows.Forms.Padding(1);
+            this.txtparaustu.Multiline = true;
+            this.txtparaustu.Name = "txtparaustu";
+            this.txtparaustu.Size = new System.Drawing.Size(112, 44);
+            this.txtparaustu.TabIndex = 1;
+            this.txtparaustu.Text = "0";
+            this.txtparaustu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 40);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Ödenen(F12)";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtOdenen
+            // 
+            this.txtOdenen.BackColor = System.Drawing.Color.Silver;
+            this.txtOdenen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOdenen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtOdenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtOdenen.Location = new System.Drawing.Point(1, 41);
+            this.txtOdenen.Margin = new System.Windows.Forms.Padding(1);
+            this.txtOdenen.Multiline = true;
+            this.txtOdenen.Name = "txtOdenen";
+            this.txtOdenen.Size = new System.Drawing.Size(112, 44);
+            this.txtOdenen.TabIndex = 3;
+            this.txtOdenen.Text = "0";
+            this.txtOdenen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // SatisAnaEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1643,12 +1728,15 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1742,8 +1830,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox tGenelToplam;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtparaustu;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.TextBox txtOdenen;
+        private System.Windows.Forms.Label label1;
     }
 }
 
