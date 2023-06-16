@@ -101,22 +101,6 @@
             this.chSatisIadeIslemi = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.gridSatislistesi = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.bKart = new System.Windows.Forms.Button();
-            this.bKartNakit = new System.Windows.Forms.Button();
-            this.bNakit = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tParaUstu = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.tOdenen = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tGenelToplam = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Barkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UrunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UrunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,6 +111,18 @@
             this.Miktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Toplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sil = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.bKart = new System.Windows.Forms.Button();
+            this.bKartNakit = new System.Windows.Forms.Button();
+            this.bNakit = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tGenelToplam = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -142,8 +138,6 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -709,7 +703,7 @@
             this.bH25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH25.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH25.Location = new System.Drawing.Point(625, 501);
             this.bH25.Margin = new System.Windows.Forms.Padding(1);
@@ -718,6 +712,8 @@
             this.bH25.TabIndex = 24;
             this.bH25.Text = "bhizli1";
             this.bH25.UseVisualStyleBackColor = false;
+            this.bH25.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH25.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH24
             // 
@@ -725,7 +721,7 @@
             this.bH24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH24.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH24.Location = new System.Drawing.Point(469, 501);
             this.bH24.Margin = new System.Windows.Forms.Padding(1);
@@ -734,6 +730,8 @@
             this.bH24.TabIndex = 23;
             this.bH24.Text = "bhizli1";
             this.bH24.UseVisualStyleBackColor = false;
+            this.bH24.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH24.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH23
             // 
@@ -741,7 +739,7 @@
             this.bH23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH23.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH23.Location = new System.Drawing.Point(313, 501);
             this.bH23.Margin = new System.Windows.Forms.Padding(1);
@@ -750,6 +748,8 @@
             this.bH23.TabIndex = 22;
             this.bH23.Text = "bhizli1";
             this.bH23.UseVisualStyleBackColor = false;
+            this.bH23.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH23.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH22
             // 
@@ -757,7 +757,7 @@
             this.bH22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH22.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH22.Location = new System.Drawing.Point(157, 501);
             this.bH22.Margin = new System.Windows.Forms.Padding(1);
@@ -766,6 +766,8 @@
             this.bH22.TabIndex = 21;
             this.bH22.Text = "bhizli1";
             this.bH22.UseVisualStyleBackColor = false;
+            this.bH22.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH22.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // tableLayoutPanel4
             // 
@@ -819,7 +821,7 @@
             this.bH21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH21.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH21.Location = new System.Drawing.Point(1, 501);
             this.bH21.Margin = new System.Windows.Forms.Padding(1);
@@ -828,6 +830,8 @@
             this.bH21.TabIndex = 20;
             this.bH21.Text = "bhizli1";
             this.bH21.UseVisualStyleBackColor = false;
+            this.bH21.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH21.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH20
             // 
@@ -835,7 +839,7 @@
             this.bH20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH20.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH20.Location = new System.Drawing.Point(625, 376);
             this.bH20.Margin = new System.Windows.Forms.Padding(1);
@@ -844,6 +848,8 @@
             this.bH20.TabIndex = 19;
             this.bH20.Text = "bhizli1";
             this.bH20.UseVisualStyleBackColor = false;
+            this.bH20.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH20.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH19
             // 
@@ -851,7 +857,7 @@
             this.bH19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH19.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH19.Location = new System.Drawing.Point(469, 376);
             this.bH19.Margin = new System.Windows.Forms.Padding(1);
@@ -860,6 +866,8 @@
             this.bH19.TabIndex = 18;
             this.bH19.Text = "bhizli1";
             this.bH19.UseVisualStyleBackColor = false;
+            this.bH19.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH19.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bh18
             // 
@@ -867,7 +875,7 @@
             this.bh18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bh18.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bh18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bh18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bh18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bh18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bh18.Location = new System.Drawing.Point(313, 376);
             this.bh18.Margin = new System.Windows.Forms.Padding(1);
@@ -876,6 +884,8 @@
             this.bh18.TabIndex = 17;
             this.bh18.Text = "bhizli1";
             this.bh18.UseVisualStyleBackColor = false;
+            this.bh18.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bh18.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bh17
             // 
@@ -883,7 +893,7 @@
             this.bh17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bh17.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bh17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bh17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bh17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bh17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bh17.Location = new System.Drawing.Point(157, 376);
             this.bh17.Margin = new System.Windows.Forms.Padding(1);
@@ -892,6 +902,8 @@
             this.bh17.TabIndex = 16;
             this.bh17.Text = "bhizli1";
             this.bh17.UseVisualStyleBackColor = false;
+            this.bh17.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bh17.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH16
             // 
@@ -899,7 +911,7 @@
             this.bH16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH16.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH16.Location = new System.Drawing.Point(1, 376);
             this.bH16.Margin = new System.Windows.Forms.Padding(1);
@@ -908,6 +920,8 @@
             this.bH16.TabIndex = 15;
             this.bH16.Text = "bhizli1";
             this.bH16.UseVisualStyleBackColor = false;
+            this.bH16.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bh15
             // 
@@ -915,7 +929,7 @@
             this.bh15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bh15.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bh15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bh15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bh15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bh15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bh15.Location = new System.Drawing.Point(625, 251);
             this.bh15.Margin = new System.Windows.Forms.Padding(1);
@@ -924,6 +938,8 @@
             this.bh15.TabIndex = 14;
             this.bh15.Text = "bhizli1";
             this.bh15.UseVisualStyleBackColor = false;
+            this.bh15.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bh15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH14
             // 
@@ -931,7 +947,7 @@
             this.bH14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH14.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH14.Location = new System.Drawing.Point(469, 251);
             this.bH14.Margin = new System.Windows.Forms.Padding(1);
@@ -940,6 +956,8 @@
             this.bH14.TabIndex = 13;
             this.bH14.Text = "bhizli1";
             this.bH14.UseVisualStyleBackColor = false;
+            this.bH14.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH13
             // 
@@ -947,7 +965,7 @@
             this.bH13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH13.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH13.Location = new System.Drawing.Point(313, 251);
             this.bH13.Margin = new System.Windows.Forms.Padding(1);
@@ -956,6 +974,8 @@
             this.bH13.TabIndex = 12;
             this.bH13.Text = "bhizli1";
             this.bH13.UseVisualStyleBackColor = false;
+            this.bH13.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH12
             // 
@@ -963,7 +983,7 @@
             this.bH12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH12.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH12.Location = new System.Drawing.Point(157, 251);
             this.bH12.Margin = new System.Windows.Forms.Padding(1);
@@ -972,6 +992,8 @@
             this.bH12.TabIndex = 11;
             this.bH12.Text = "bhizli1";
             this.bH12.UseVisualStyleBackColor = false;
+            this.bH12.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH11
             // 
@@ -979,7 +1001,7 @@
             this.bH11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH11.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH11.Location = new System.Drawing.Point(1, 251);
             this.bH11.Margin = new System.Windows.Forms.Padding(1);
@@ -988,6 +1010,8 @@
             this.bH11.TabIndex = 10;
             this.bH11.Text = "bhizli1";
             this.bH11.UseVisualStyleBackColor = false;
+            this.bH11.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH10
             // 
@@ -995,7 +1019,7 @@
             this.bH10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH10.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH10.Location = new System.Drawing.Point(625, 126);
             this.bH10.Margin = new System.Windows.Forms.Padding(1);
@@ -1004,6 +1028,8 @@
             this.bH10.TabIndex = 9;
             this.bH10.Text = "bhizli1";
             this.bH10.UseVisualStyleBackColor = false;
+            this.bH10.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH9
             // 
@@ -1011,7 +1037,7 @@
             this.bH9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH9.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH9.Location = new System.Drawing.Point(469, 126);
             this.bH9.Margin = new System.Windows.Forms.Padding(1);
@@ -1020,6 +1046,8 @@
             this.bH9.TabIndex = 8;
             this.bH9.Text = "bhizli1";
             this.bH9.UseVisualStyleBackColor = false;
+            this.bH9.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH8
             // 
@@ -1027,7 +1055,7 @@
             this.bH8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH8.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH8.Location = new System.Drawing.Point(313, 126);
             this.bH8.Margin = new System.Windows.Forms.Padding(1);
@@ -1036,6 +1064,8 @@
             this.bH8.TabIndex = 7;
             this.bH8.Text = "bhizli1";
             this.bH8.UseVisualStyleBackColor = false;
+            this.bH8.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH7
             // 
@@ -1043,7 +1073,7 @@
             this.bH7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH7.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH7.Location = new System.Drawing.Point(157, 126);
             this.bH7.Margin = new System.Windows.Forms.Padding(1);
@@ -1052,6 +1082,8 @@
             this.bH7.TabIndex = 6;
             this.bH7.Text = "bhizli1";
             this.bH7.UseVisualStyleBackColor = false;
+            this.bH7.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH6
             // 
@@ -1059,7 +1091,7 @@
             this.bH6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH6.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH6.Location = new System.Drawing.Point(1, 126);
             this.bH6.Margin = new System.Windows.Forms.Padding(1);
@@ -1068,6 +1100,8 @@
             this.bH6.TabIndex = 5;
             this.bH6.Text = "bhizli1";
             this.bH6.UseVisualStyleBackColor = false;
+            this.bH6.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH5
             // 
@@ -1075,7 +1109,7 @@
             this.bH5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH5.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH5.Location = new System.Drawing.Point(625, 1);
             this.bH5.Margin = new System.Windows.Forms.Padding(1);
@@ -1084,6 +1118,8 @@
             this.bH5.TabIndex = 4;
             this.bH5.Text = "bhizli1";
             this.bH5.UseVisualStyleBackColor = false;
+            this.bH5.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH4
             // 
@@ -1091,7 +1127,7 @@
             this.bH4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH4.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH4.Location = new System.Drawing.Point(469, 1);
             this.bH4.Margin = new System.Windows.Forms.Padding(1);
@@ -1100,6 +1136,8 @@
             this.bH4.TabIndex = 3;
             this.bH4.Text = "bhizli1";
             this.bH4.UseVisualStyleBackColor = false;
+            this.bH4.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH3
             // 
@@ -1107,7 +1145,7 @@
             this.bH3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH3.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH3.Location = new System.Drawing.Point(313, 1);
             this.bH3.Margin = new System.Windows.Forms.Padding(1);
@@ -1116,6 +1154,8 @@
             this.bH3.TabIndex = 2;
             this.bH3.Text = "bhizli1";
             this.bH3.UseVisualStyleBackColor = false;
+            this.bH3.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH2
             // 
@@ -1123,7 +1163,7 @@
             this.bH2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH2.Location = new System.Drawing.Point(157, 1);
             this.bH2.Margin = new System.Windows.Forms.Padding(1);
@@ -1132,6 +1172,8 @@
             this.bH2.TabIndex = 1;
             this.bH2.Text = "bhizli1";
             this.bH2.UseVisualStyleBackColor = false;
+            this.bH2.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH1
             // 
@@ -1139,7 +1181,7 @@
             this.bH1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bH1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bH1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bH1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bH1.Location = new System.Drawing.Point(1, 1);
             this.bH1.Margin = new System.Windows.Forms.Padding(1);
@@ -1148,6 +1190,8 @@
             this.bH1.TabIndex = 0;
             this.bH1.Text = "bhizli1";
             this.bH1.UseVisualStyleBackColor = false;
+            this.bH1.Click += new System.EventHandler(this.HizliButtonClick);
+            this.bH1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // splitContainer2
             // 
@@ -1305,8 +1349,84 @@
             this.gridSatislistesi.TabIndex = 1;
             this.gridSatislistesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSatislistesi_CellContentClick);
             // 
+            // Barkod
+            // 
+            this.Barkod.HeaderText = "Barkod";
+            this.Barkod.MinimumWidth = 6;
+            this.Barkod.Name = "Barkod";
+            // 
+            // UrunAdi
+            // 
+            this.UrunAdi.HeaderText = "Ürün Adı";
+            this.UrunAdi.MinimumWidth = 6;
+            this.UrunAdi.Name = "UrunAdi";
+            // 
+            // UrunGrup
+            // 
+            this.UrunGrup.HeaderText = "Ürün Grup";
+            this.UrunGrup.MinimumWidth = 6;
+            this.UrunGrup.Name = "UrunGrup";
+            this.UrunGrup.Visible = false;
+            // 
+            // Birim
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Birim.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Birim.HeaderText = "Birim";
+            this.Birim.MinimumWidth = 6;
+            this.Birim.Name = "Birim";
+            // 
+            // KdvTutari
+            // 
+            this.KdvTutari.HeaderText = "KdvTutari";
+            this.KdvTutari.MinimumWidth = 6;
+            this.KdvTutari.Name = "KdvTutari";
+            this.KdvTutari.Visible = false;
+            // 
+            // AlisFiyat
+            // 
+            this.AlisFiyat.HeaderText = "AlisFiyat";
+            this.AlisFiyat.Name = "AlisFiyat";
+            this.AlisFiyat.Visible = false;
+            // 
+            // Fiyat
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fiyat.HeaderText = "Fiyat";
+            this.Fiyat.MinimumWidth = 6;
+            this.Fiyat.Name = "Fiyat";
+            // 
+            // Miktar
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Miktar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Miktar.HeaderText = "Miktar";
+            this.Miktar.MinimumWidth = 6;
+            this.Miktar.Name = "Miktar";
+            // 
+            // Toplam
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Toplam.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Toplam.HeaderText = "Toplam";
+            this.Toplam.MinimumWidth = 6;
+            this.Toplam.Name = "Toplam";
+            // 
+            // Sil
+            // 
+            this.Sil.HeaderText = "Sil";
+            this.Sil.Image = global::StokTakipProgrami.Properties.Resources.remove;
+            this.Sil.MinimumWidth = 6;
+            this.Sil.Name = "Sil";
+            // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Silver;
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1384,138 +1504,68 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel9, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tGenelToplam, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(369, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel9, 0, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(372, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.38309F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.61691F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(248, 126);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(242, 134);
             this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // tGenelToplam
+            // 
+            this.tGenelToplam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tGenelToplam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tGenelToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tGenelToplam.Location = new System.Drawing.Point(3, 3);
+            this.tGenelToplam.Multiline = true;
+            this.tGenelToplam.Name = "tGenelToplam";
+            this.tGenelToplam.Size = new System.Drawing.Size(236, 34);
+            this.tGenelToplam.TabIndex = 0;
+            this.tGenelToplam.Text = "0";
+            this.tGenelToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.12285F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.87715F));
-            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel12, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 0);
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 29);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(1, 41);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(248, 97);
-            this.tableLayoutPanel9.TabIndex = 2;
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.BackColor = System.Drawing.Color.DimGray;
-            this.tableLayoutPanel12.ColumnCount = 1;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel12.Controls.Add(this.tParaUstu, 0, 1);
-            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(124, 0);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 2;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(124, 97);
-            this.tableLayoutPanel12.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Para Üstü  ";
-            // 
-            // tParaUstu
-            // 
-            this.tParaUstu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tParaUstu.BackColor = System.Drawing.Color.DimGray;
-            this.tParaUstu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tParaUstu.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.tParaUstu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tParaUstu.ForeColor = System.Drawing.Color.White;
-            this.tParaUstu.Location = new System.Drawing.Point(0, 54);
-            this.tParaUstu.Margin = new System.Windows.Forms.Padding(0);
-            this.tParaUstu.Name = "tParaUstu";
-            this.tParaUstu.Size = new System.Drawing.Size(124, 19);
-            this.tParaUstu.TabIndex = 1;
-            this.tParaUstu.Text = "0";
-            this.tParaUstu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.BackColor = System.Drawing.Color.DarkOrange;
-            this.tableLayoutPanel10.ColumnCount = 1;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Controls.Add(this.tOdenen, 0, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 2;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(124, 97);
-            this.tableLayoutPanel10.TabIndex = 0;
-            // 
-            // tOdenen
-            // 
-            this.tOdenen.BackColor = System.Drawing.Color.DarkOrange;
-            this.tOdenen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tOdenen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tOdenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tOdenen.ForeColor = System.Drawing.Color.White;
-            this.tOdenen.Location = new System.Drawing.Point(0, 48);
-            this.tOdenen.Margin = new System.Windows.Forms.Padding(0);
-            this.tOdenen.Name = "tOdenen";
-            this.tOdenen.Size = new System.Drawing.Size(124, 19);
-            this.tOdenen.TabIndex = 1;
-            this.tOdenen.Text = "0";
-            this.tOdenen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(240, 92);
+            this.tableLayoutPanel9.TabIndex = 1;
+            this.tableLayoutPanel9.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel9_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 18);
+            this.label1.Size = new System.Drawing.Size(111, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ödenen ";
+            this.label1.Text = "Ödenen (F12)";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tGenelToplam
+            // label2
             // 
-            this.tGenelToplam.BackColor = System.Drawing.Color.Brown;
-            this.tGenelToplam.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.tGenelToplam.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.tGenelToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tGenelToplam.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.tGenelToplam.Location = new System.Drawing.Point(1, 1);
-            this.tGenelToplam.Margin = new System.Windows.Forms.Padding(1);
-            this.tGenelToplam.Name = "tGenelToplam";
-            this.tGenelToplam.Size = new System.Drawing.Size(246, 27);
-            this.tGenelToplam.TabIndex = 1;
-            this.tGenelToplam.Text = "0";
-            this.tGenelToplam.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.tGenelToplam.UseVisualStyleBackColor = false;
-            this.tGenelToplam.Click += new System.EventHandler(this.tGenelToplam_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(123, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Para Üstü";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -1566,81 +1616,6 @@
             this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             this.dataGridViewImageColumn3.Width = 89;
             // 
-            // Barkod
-            // 
-            this.Barkod.HeaderText = "Barkod";
-            this.Barkod.MinimumWidth = 6;
-            this.Barkod.Name = "Barkod";
-            // 
-            // UrunAdi
-            // 
-            this.UrunAdi.HeaderText = "Ürün Adı";
-            this.UrunAdi.MinimumWidth = 6;
-            this.UrunAdi.Name = "UrunAdi";
-            // 
-            // UrunGrup
-            // 
-            this.UrunGrup.HeaderText = "Ürün Grup";
-            this.UrunGrup.MinimumWidth = 6;
-            this.UrunGrup.Name = "UrunGrup";
-            this.UrunGrup.Visible = false;
-            // 
-            // Birim
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Birim.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Birim.HeaderText = "Birim";
-            this.Birim.MinimumWidth = 6;
-            this.Birim.Name = "Birim";
-            // 
-            // KdvTutari
-            // 
-            this.KdvTutari.HeaderText = "KdvTutari";
-            this.KdvTutari.MinimumWidth = 6;
-            this.KdvTutari.Name = "KdvTutari";
-            this.KdvTutari.Visible = false;
-            // 
-            // AlisFiyat
-            // 
-            this.AlisFiyat.HeaderText = "AlisFiyat";
-            this.AlisFiyat.Name = "AlisFiyat";
-            this.AlisFiyat.Visible = false;
-            // 
-            // Fiyat
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Fiyat.HeaderText = "Fiyat";
-            this.Fiyat.MinimumWidth = 6;
-            this.Fiyat.Name = "Fiyat";
-            // 
-            // Miktar
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Miktar.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Miktar.HeaderText = "Miktar";
-            this.Miktar.MinimumWidth = 6;
-            this.Miktar.Name = "Miktar";
-            // 
-            // Toplam
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Toplam.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Toplam.HeaderText = "Toplam";
-            this.Toplam.MinimumWidth = 6;
-            this.Toplam.Name = "Toplam";
-            // 
-            // Sil
-            // 
-            this.Sil.HeaderText = "Sil";
-            this.Sil.Image = global::StokTakipProgrami.Properties.Resources.remove;
-            this.Sil.MinimumWidth = 6;
-            this.Sil.Name = "Sil";
-            // 
             // SatisAnaEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1666,11 +1641,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSatislistesi)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel12.ResumeLayout(false);
-            this.tableLayoutPanel12.PerformLayout();
-            this.tableLayoutPanel10.ResumeLayout(false);
-            this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -1755,15 +1728,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        public System.Windows.Forms.Button tGenelToplam;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tParaUstu;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.TextBox tOdenen;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barkod;
         private System.Windows.Forms.DataGridViewTextBoxColumn UrunAdi;
@@ -1775,6 +1739,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Miktar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Toplam;
         private System.Windows.Forms.DataGridViewImageColumn Sil;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TextBox tGenelToplam;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

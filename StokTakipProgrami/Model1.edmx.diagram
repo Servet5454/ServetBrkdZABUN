@@ -7,6 +7,7 @@
       <Diagram DiagramId="5d4e3d12d5b14710b80c75cf28bd48fb" Name="Diagram1">
         <EntityTypeShape EntityType="Database1Model.Urun" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.Terazi" Width="1.5" PointX="2.75" PointY="0.875" />
+        <EntityTypeShape EntityType="Database1Model.HizliUrunler" Width="1.5" PointX="2.75" PointY="2.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

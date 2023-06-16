@@ -28,9 +28,10 @@ namespace StokTakipProgrami
 
         }
 
-        private void SatisAnaEkran_Load(object sender, EventArgs e)
+        private void SatisAnaEkran_Load(object sender, EventArgs e) //Anasatış ekranının ilk yükleneceği yer burası
         {
-
+            hizliButonUrunGetir(); //metodu çağıırıyoruz
+            
         }
 
         private void bN1_Click(object sender, EventArgs e)
@@ -168,18 +169,67 @@ namespace StokTakipProgrami
         {
 
         }
+       
+
+        private void gridSatislistesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 9)
+            {
+                gridSatislistesi.Rows.Remove(gridSatislistesi.CurrentRow);
+                gridSatislistesi.ClearSelection();
+                GenelToplam();
+                tBarkod.Focus();
+            }
+        }
+       
+        
+        #region Metotlar
+
+        private void bh_MouseDown(object sender, MouseEventArgs e)// bu metoda hızlı tuşların sağ tık işlemini bağlayacağım ve böylelikle tek bir yerden işlemleri halledeceğim bu metoda alttaki sil click i bağlı
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+                Button btn =(Button)sender;
+                if (!btn.Text.StartsWith("-")) // burada tire ile başlamıyorsaya bağladık mevzuyu...
+                {
+                    int buttonid =Convert.ToInt32(btn.Name.ToString().Substring(2,btn.Name.Length - 2));
+                    ContextMenuStrip strip = new ContextMenuStrip();
+                    ToolStripMenuItem sil = new ToolStripMenuItem();
+                    sil.Text = "Temizle - Buton No:" + buttonid.ToString();
+                    sil.Click += Sil_Click; //burada 
+                    strip.Items.Add( sil );
+                    this.ContextMenuStrip = strip;
+                }
+
+            }
+        }
+
+        private void Sil_Click(object sender, EventArgs e)
+        {
+            int buttonid = Convert.ToInt16(sender.ToString().Substring(19, sender.ToString().Length - 19));//Sonunda Butonid ye ulaştık :)
+            var guncellenecekurun = context.HizliUrunler.Find(buttonid);
+            guncellenecekurun.Barkod = "-";
+            guncellenecekurun.UrunAdi = "-";
+            guncellenecekurun.Fiyat = 0;
+            context.SaveChanges();
+            double fiyat =0;
+            Button btn = this.Controls.Find("bH" + buttonid, true).FirstOrDefault() as Button;
+            btn.Text = "-" + "\n" + fiyat.ToString("C2");
+
+        }
+
         private void GenelToplam()
         {
-           
-                double toplam = 0;
-                for (int i = 0; i < gridSatislistesi.Rows.Count; i++)
-                {
-                    toplam += Convert.ToDouble(gridSatislistesi.Rows[i].Cells["Toplam"].Value);
-                }
-                tGenelToplam.Text = toplam.ToString("C2");
-                tBarkod.Clear();
-                tBarkod.Focus();
-            
+
+            double toplam = 0;
+            for (int i = 0; i < gridSatislistesi.Rows.Count; i++)
+            {
+                toplam += Convert.ToDouble(gridSatislistesi.Rows[i].Cells["Toplam"].Value);
+            }
+            tGenelToplam.Text = toplam.ToString("C2");
+            tBarkod.Clear();
+            tBarkod.Focus();
+
         }
         private void UrunGetir(Urun urun, string barkod, double miktar)
         {
@@ -214,16 +264,56 @@ namespace StokTakipProgrami
 
             }
         }
-
-        private void gridSatislistesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void hizliButonUrunGetir()
         {
-            if (e.ColumnIndex == 9)
+            var hizliurun =context.HizliUrunler.ToList();
+            foreach (var item in hizliurun)
             {
-                gridSatislistesi.Rows.Remove(gridSatislistesi.CurrentRow);
-                gridSatislistesi.ClearSelection();
-                GenelToplam();
-                tBarkod.Focus();
+                Button bH = this.Controls.Find("bH" + item.Id,true).FirstOrDefault() as Button;
+                if(bH != null)
+                {
+                    double fiyat =Islemler.DoubleYap(item.Fiyat.ToString()); //double yap olarak static bir metot oluşturup oradan çeviri yapıyorumm...
+                    bH.Text = item.UrunAdi + "\n" + fiyat.ToString("C2");
+                }
             }
+        }
+
+        private void HizliButtonClick(object sender,EventArgs e) //hızlı butona basılınca yapılaacak işlemler ortak hepsi birlikte
+        {
+            Button btn = (Button)sender; //butona çeviriyorum 
+            int butonid = Convert.ToInt32(btn.Name.ToString().Substring(2, btn.Name.Length - 2));//burada butonların başlarındaki 2 harfi almıyorum sadece elimde buton no gibi numara değerşleri kalıyor...
+            if (btn.Text.ToString().StartsWith("-"))
+            {
+                HizliButonUrunEkle hizliButonUrunEkle =new HizliButonUrunEkle();
+                hizliButonUrunEkle.lbutonid.Text=butonid.ToString();
+                hizliButonUrunEkle.ShowDialog();
+            }
+            else
+            {
+                
+                var urunbarkod = context.HizliUrunler.Where(p => p.Id == butonid).Select(p => p.Barkod).FirstOrDefault();//burada ide si barkodid nosuna eşit olanı getir dedik ama select yaparak ne istediysek sadece onu aldık...
+                var urun = context.Urun.Where(p => p.Barkod == urunbarkod).FirstOrDefault();
+                UrunGetir(urun, urunbarkod, 1);
+                GenelToplam();
+
+            }
+            
+        }
+        #endregion
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
