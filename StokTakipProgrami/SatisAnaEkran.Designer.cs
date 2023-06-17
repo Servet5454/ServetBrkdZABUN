@@ -58,14 +58,14 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.bTemizle = new System.Windows.Forms.Button();
+            this.btnTemizle = new System.Windows.Forms.Button();
             this.bAdet = new System.Windows.Forms.Button();
             this.button51 = new System.Windows.Forms.Button();
             this.bOdenen = new System.Windows.Forms.Button();
-            this.bIade = new System.Windows.Forms.Button();
+            this.btniade = new System.Windows.Forms.Button();
             this.bBarkod = new System.Windows.Forms.Button();
             this.bIslemBeklet = new System.Windows.Forms.Button();
-            this.bDiger = new System.Windows.Forms.Button();
+            this.btnDiger = new System.Windows.Forms.Button();
             this.bH25 = new System.Windows.Forms.Button();
             this.bH24 = new System.Windows.Forms.Button();
             this.bH23 = new System.Windows.Forms.Button();
@@ -118,15 +118,15 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tGenelToplam = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtparaustu = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.txtOdenen = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -142,13 +142,13 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // bNV
@@ -566,14 +566,14 @@
             this.tableLayoutPanel11.ColumnCount = 2;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Controls.Add(this.bTemizle, 1, 3);
+            this.tableLayoutPanel11.Controls.Add(this.btnTemizle, 1, 3);
             this.tableLayoutPanel11.Controls.Add(this.bAdet, 0, 3);
             this.tableLayoutPanel11.Controls.Add(this.button51, 1, 2);
             this.tableLayoutPanel11.Controls.Add(this.bOdenen, 0, 2);
-            this.tableLayoutPanel11.Controls.Add(this.bIade, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.btniade, 1, 1);
             this.tableLayoutPanel11.Controls.Add(this.bBarkod, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.bIslemBeklet, 1, 0);
-            this.tableLayoutPanel11.Controls.Add(this.bDiger, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.btnDiger, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(586, 0);
             this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(0);
@@ -590,21 +590,22 @@
             this.tableLayoutPanel11.Size = new System.Drawing.Size(196, 222);
             this.tableLayoutPanel11.TabIndex = 2;
             // 
-            // bTemizle
+            // btnTemizle
             // 
-            this.bTemizle.BackColor = System.Drawing.Color.YellowGreen;
-            this.bTemizle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bTemizle.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.bTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bTemizle.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.bTemizle.Location = new System.Drawing.Point(99, 166);
-            this.bTemizle.Margin = new System.Windows.Forms.Padding(1);
-            this.bTemizle.Name = "bTemizle";
-            this.bTemizle.Size = new System.Drawing.Size(96, 55);
-            this.bTemizle.TabIndex = 9;
-            this.bTemizle.Text = "Temizle";
-            this.bTemizle.UseVisualStyleBackColor = false;
+            this.btnTemizle.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnTemizle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTemizle.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnTemizle.Location = new System.Drawing.Point(99, 166);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(1);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(96, 55);
+            this.btnTemizle.TabIndex = 9;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = false;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // bAdet
             // 
@@ -656,21 +657,22 @@
             this.bOdenen.UseVisualStyleBackColor = false;
             this.bOdenen.Click += new System.EventHandler(this.bOdenen_Click);
             // 
-            // bIade
+            // btniade
             // 
-            this.bIade.BackColor = System.Drawing.Color.ForestGreen;
-            this.bIade.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bIade.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
-            this.bIade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bIade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bIade.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.bIade.Location = new System.Drawing.Point(99, 56);
-            this.bIade.Margin = new System.Windows.Forms.Padding(1);
-            this.bIade.Name = "bIade";
-            this.bIade.Size = new System.Drawing.Size(96, 53);
-            this.bIade.TabIndex = 5;
-            this.bIade.Text = "İade";
-            this.bIade.UseVisualStyleBackColor = false;
+            this.btniade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btniade.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btniade.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
+            this.btniade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btniade.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btniade.Location = new System.Drawing.Point(99, 56);
+            this.btniade.Margin = new System.Windows.Forms.Padding(1);
+            this.btniade.Name = "btniade";
+            this.btniade.Size = new System.Drawing.Size(96, 53);
+            this.btniade.TabIndex = 5;
+            this.btniade.Text = "İade";
+            this.btniade.UseVisualStyleBackColor = false;
+            this.btniade.Click += new System.EventHandler(this.btniade_Click);
             // 
             // bBarkod
             // 
@@ -705,21 +707,22 @@
             this.bIslemBeklet.Text = "İşlem Beklet";
             this.bIslemBeklet.UseVisualStyleBackColor = false;
             // 
-            // bDiger
+            // btnDiger
             // 
-            this.bDiger.BackColor = System.Drawing.Color.DimGray;
-            this.bDiger.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bDiger.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.bDiger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bDiger.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bDiger.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.bDiger.Location = new System.Drawing.Point(1, 1);
-            this.bDiger.Margin = new System.Windows.Forms.Padding(1);
-            this.bDiger.Name = "bDiger";
-            this.bDiger.Size = new System.Drawing.Size(96, 53);
-            this.bDiger.TabIndex = 2;
-            this.bDiger.Text = "Diğer Ürün";
-            this.bDiger.UseVisualStyleBackColor = false;
+            this.btnDiger.BackColor = System.Drawing.Color.DimGray;
+            this.btnDiger.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDiger.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnDiger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiger.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDiger.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnDiger.Location = new System.Drawing.Point(1, 1);
+            this.btnDiger.Margin = new System.Windows.Forms.Padding(1);
+            this.btnDiger.Name = "btnDiger";
+            this.btnDiger.Size = new System.Drawing.Size(96, 53);
+            this.btnDiger.TabIndex = 2;
+            this.btnDiger.Text = "Diğer Ürün";
+            this.btnDiger.UseVisualStyleBackColor = false;
+            this.btnDiger.Click += new System.EventHandler(this.btnDiger_Click);
             // 
             // bH25
             // 
@@ -1568,6 +1571,90 @@
             this.tableLayoutPanel9.TabIndex = 1;
             this.tableLayoutPanel9.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel9_Paint);
             // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.txtparaustu, 0, 1);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(123, 3);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(114, 86);
+            this.tableLayoutPanel12.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 40);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Para Üstü";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // txtparaustu
+            // 
+            this.txtparaustu.BackColor = System.Drawing.Color.Silver;
+            this.txtparaustu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtparaustu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtparaustu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtparaustu.Location = new System.Drawing.Point(1, 41);
+            this.txtparaustu.Margin = new System.Windows.Forms.Padding(1);
+            this.txtparaustu.Multiline = true;
+            this.txtparaustu.Name = "txtparaustu";
+            this.txtparaustu.Size = new System.Drawing.Size(112, 44);
+            this.txtparaustu.TabIndex = 1;
+            this.txtparaustu.Text = "0";
+            this.txtparaustu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Controls.Add(this.txtOdenen, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(114, 86);
+            this.tableLayoutPanel10.TabIndex = 0;
+            // 
+            // txtOdenen
+            // 
+            this.txtOdenen.BackColor = System.Drawing.Color.Silver;
+            this.txtOdenen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOdenen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtOdenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtOdenen.Location = new System.Drawing.Point(1, 41);
+            this.txtOdenen.Margin = new System.Windows.Forms.Padding(1);
+            this.txtOdenen.Multiline = true;
+            this.txtOdenen.Name = "txtOdenen";
+            this.txtOdenen.Size = new System.Drawing.Size(112, 44);
+            this.txtOdenen.TabIndex = 3;
+            this.txtOdenen.Text = "0";
+            this.txtOdenen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 40);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Ödenen(F12)";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -1617,90 +1704,6 @@
             this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             this.dataGridViewImageColumn3.Width = 89;
             // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.ColumnCount = 1;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Controls.Add(this.txtOdenen, 0, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 2;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(114, 86);
-            this.tableLayoutPanel10.TabIndex = 0;
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.ColumnCount = 1;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel12.Controls.Add(this.txtparaustu, 0, 1);
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(123, 3);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 2;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(114, 86);
-            this.tableLayoutPanel12.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 40);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Para Üstü";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // txtparaustu
-            // 
-            this.txtparaustu.BackColor = System.Drawing.Color.Silver;
-            this.txtparaustu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtparaustu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtparaustu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtparaustu.Location = new System.Drawing.Point(1, 41);
-            this.txtparaustu.Margin = new System.Windows.Forms.Padding(1);
-            this.txtparaustu.Multiline = true;
-            this.txtparaustu.Name = "txtparaustu";
-            this.txtparaustu.Size = new System.Drawing.Size(112, 44);
-            this.txtparaustu.TabIndex = 1;
-            this.txtparaustu.Text = "0";
-            this.txtparaustu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 40);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ödenen(F12)";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtOdenen
-            // 
-            this.txtOdenen.BackColor = System.Drawing.Color.Silver;
-            this.txtOdenen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtOdenen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtOdenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOdenen.Location = new System.Drawing.Point(1, 41);
-            this.txtOdenen.Margin = new System.Windows.Forms.Padding(1);
-            this.txtOdenen.Multiline = true;
-            this.txtOdenen.Name = "txtOdenen";
-            this.txtOdenen.Size = new System.Drawing.Size(112, 44);
-            this.txtOdenen.TabIndex = 3;
-            this.txtOdenen.Text = "0";
-            this.txtOdenen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // SatisAnaEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1728,15 +1731,15 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tableLayoutPanel10.ResumeLayout(false);
-            this.tableLayoutPanel10.PerformLayout();
-            this.tableLayoutPanel12.ResumeLayout(false);
-            this.tableLayoutPanel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1767,14 +1770,14 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private System.Windows.Forms.Button bTemizle;
+        private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button bAdet;
         private System.Windows.Forms.Button button51;
         private System.Windows.Forms.Button bOdenen;
-        private System.Windows.Forms.Button bIade;
+        private System.Windows.Forms.Button btniade;
         private System.Windows.Forms.Button bBarkod;
         private System.Windows.Forms.Button bIslemBeklet;
-        private System.Windows.Forms.Button bDiger;
+        private System.Windows.Forms.Button btnDiger;
         private System.Windows.Forms.Button bH25;
         private System.Windows.Forms.Button bH24;
         private System.Windows.Forms.Button bH23;

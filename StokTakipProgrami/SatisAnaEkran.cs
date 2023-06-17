@@ -233,6 +233,7 @@ namespace StokTakipProgrami
                 toplam += Convert.ToDouble(gridSatislistesi.Rows[i].Cells["Toplam"].Value);
             }
             tGenelToplam.Text = toplam.ToString("C2");
+            tMiktar.Text = "1";
             tBarkod.Clear();
             tBarkod.Focus();
 
@@ -283,74 +284,82 @@ namespace StokTakipProgrami
                 }
             }
         }
-        private void Numaratorx_Click(object sender,EventArgs e)
+
+        private void Temizle()
+        {
+            
+            tBarkod.Clear();
+            txtOdenen.Clear();
+            txtparaustu.Clear();
+            tGenelToplam.Text = 0.ToString("C2");
+            chSatisIadeIslemi.Checked = false;
+            tNumarator.Clear();
+            tMiktar.Text = "1";
+            gridSatislistesi.Rows.Clear();
+            tBarkod.Focus();
+        }
+
+        #endregion
+        private void Numaratorx_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            if(btn.Text == ",")
+            if (btn.Text == ",")
             {
                 int virgul = tNumarator.Text.Count(p => p == ',');
-                if(virgul < 1)
+                if (virgul < 1)
                 {
                     tNumarator.Text += btn.Text;
                 }
             }
-            else if(btn.Text == "<")
+            else if (btn.Text == "<")
             {
                 if (tNumarator.Text.Length > 0)
                 {
-                    tNumarator.Text =tNumarator.Text.Substring(0,tNumarator.Text.Length - 1);
+                    tNumarator.Text = tNumarator.Text.Substring(0, tNumarator.Text.Length - 1);
                 }
             }
             else
             {
-                tNumarator.Text+=btn.Text;
+                tNumarator.Text += btn.Text;
             }
         }
 
-        private void HizliButtonClick(object sender,EventArgs e) //hızlı butona basılınca yapılaacak işlemler ortak hepsi birlikte
+        private void HizliButtonClick(object sender, EventArgs e) //hızlı butona basılınca yapılaacak işlemler ortak hepsi birlikte
         {
             Button btn = (Button)sender; //butona çeviriyorum 
             int butonid = Convert.ToInt32(btn.Name.ToString().Substring(2, btn.Name.Length - 2));//burada butonların başlarındaki 2 harfi almıyorum sadece elimde buton no gibi numara değerşleri kalıyor...
             if (btn.Text.ToString().StartsWith("-"))
             {
-                HizliButonUrunEkle hizliButonUrunEkle =new HizliButonUrunEkle();
-                hizliButonUrunEkle.lbutonid.Text=butonid.ToString();
+                HizliButonUrunEkle hizliButonUrunEkle = new HizliButonUrunEkle();
+                hizliButonUrunEkle.lbutonid.Text = butonid.ToString();
                 hizliButonUrunEkle.ShowDialog();
             }
             else
             {
-                
+
                 var urunbarkod = context.HizliUrunler.Where(p => p.Id == butonid).Select(p => p.Barkod).FirstOrDefault();//burada ide si barkodid nosuna eşit olanı getir dedik ama select yaparak ne istediysek sadece onu aldık...
                 var urun = context.Urun.Where(p => p.Barkod == urunbarkod).FirstOrDefault();
                 UrunGetir(urun, urunbarkod, Convert.ToDouble(tMiktar.Text));
                 GenelToplam();
 
             }
-            
+
         }
-        private void ParaUstuHesapla_Click(object sender,EventArgs e)
+        private void ParaUstuHesapla_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            double sonuc =Islemler.DoubleYap(btn.Text) - Islemler.DoubleYap(tGenelToplam.Text);
+            double sonuc = Islemler.DoubleYap(btn.Text) - Islemler.DoubleYap(tGenelToplam.Text);
             txtparaustu.Text = sonuc.ToString("C2");
         }
-        #endregion
 
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void tableLayoutPanel9_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void bAdet_Click(object sender, EventArgs e)
         {
             if(tNumarator.Text != "")
@@ -396,6 +405,46 @@ namespace StokTakipProgrami
                     MessageBox.Show("ürün ekleme sayfası");
                 }
             }
+        }
+
+        private void btnDiger_Click(object sender, EventArgs e)
+        {
+            if(tNumarator.Text != (""))
+            {
+                int satirsayisi = gridSatislistesi.Rows.Count;
+                gridSatislistesi.Rows.Add();
+                gridSatislistesi.Rows[satirsayisi].Cells["Barkod"].Value = "111111111116";
+                gridSatislistesi.Rows[satirsayisi].Cells["UrunAdi"].Value = "Barkodsuz Ürün";
+                gridSatislistesi.Rows[satirsayisi].Cells["UrunGrup"].Value = "Barkodsuz Ürün";
+                gridSatislistesi.Rows[satirsayisi].Cells["Birim"].Value = "Adet";
+                gridSatislistesi.Rows[satirsayisi].Cells["Miktar"].Value = 1;
+                gridSatislistesi.Rows[satirsayisi].Cells["Fiyat"].Value = Convert.ToDouble(tNumarator.Text);
+                gridSatislistesi.Rows[satirsayisi].Cells["KdvTutari"].Value = 0;
+                gridSatislistesi.Rows[satirsayisi].Cells["Toplam"].Value = Convert.ToDouble(tNumarator.Text);
+                tNumarator.Text = "";
+                GenelToplam();
+                tBarkod.Focus();
+            }
+        }
+
+        private void btniade_Click(object sender, EventArgs e)
+        {
+            if(chSatisIadeIslemi.Checked)
+            {
+                chSatisIadeIslemi.Checked = false;
+                chSatisIadeIslemi.Text = "Satış Yapılıyor";
+            }
+            else
+            {
+                chSatisIadeIslemi.Checked = true;
+                chSatisIadeIslemi.Text = "İade Yapılıyor";
+
+            }
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
         }
     }
 
