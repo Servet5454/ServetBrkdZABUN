@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -298,6 +299,61 @@ namespace StokTakipProgrami
             gridSatislistesi.Rows.Clear();
             tBarkod.Focus();
         }
+        private void SatisYap(string odemesekli)
+        {
+            int satirsayisi = gridSatislistesi.Rows.Count;
+            bool satisiade = chSatisIadeIslemi.Checked;
+            double alisfiyattoplam = 0;
+            if(satirsayisi > 0)
+            {
+                try
+                {
+                    int? islemno = context.Islem.First().IslemNo;
+                    Satis satis = new Satis();
+                    for (int i = 0; i < satirsayisi; i++)
+                    {
+                        satis.IslemNo = islemno;
+                        satis.UrunAdi = gridSatislistesi.Rows[i].Cells["UrunAdi"].Value.ToString().Substring(0, Math.Min(50, gridSatislistesi.Rows[i].Cells["UrunAdi"].Value.ToString().Length));
+                        satis.UrunGrup = gridSatislistesi.Rows[i].Cells["UrunGrup"].Value.ToString();
+                        satis.Barkod = gridSatislistesi.Rows[i].Cells["Barkod"].Value.ToString();
+                        satis.Birim = gridSatislistesi.Rows[i].Cells["Birim"].Value.ToString();
+                        satis.AlisFiyat = Islemler.DoubleYap(gridSatislistesi.Rows[i].Cells["AlisFiyat"].Value.ToString());
+                        satis.SatisFiyat = Islemler.DoubleYap(gridSatislistesi.Rows[i].Cells["Fiyat"].Value.ToString());
+                        satis.Miktar = Islemler.DoubleYap(gridSatislistesi.Rows[i].Cells["Miktar"].Value.ToString());
+                        satis.Toplam = Islemler.DoubleYap(gridSatislistesi.Rows[i].Cells["Toplam"].Value.ToString());
+                        satis.KdvTutari = Islemler.DoubleYap(gridSatislistesi.Rows[i].Cells["KdvTutari"].Value.ToString())
+                            * Islemler.DoubleYap(gridSatislistesi.Rows[i].Cells["Miktar"].Value.ToString());
+                        satis.OdemeSekli = odemesekli;
+                        satis.Iade = satisiade;
+                        satis.Tarih = DateTime.Now;
+                        satis.Kullanici = lblKullanici.Text;
+                        context.Satis.Add(satis);
+                       
+
+                    }
+                    context.SaveChanges(); //buradaki hatada kaldım...
+                    MessageBox.Show("yapıldı");
+                }
+                catch (DbEntityValidationException e)
+                {
+                    foreach (var eve in e.EntityValidationErrors)
+                    {
+                        Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                            eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                                ve.PropertyName, ve.ErrorMessage);
+                        }
+                    }
+                    throw;
+                }
+
+                
+            }
+
+
+        }
 
         #endregion
         private void Numaratorx_Click(object sender, EventArgs e)
@@ -445,6 +501,11 @@ namespace StokTakipProgrami
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             Temizle();
+        }
+
+        private void bNakit_Click(object sender, EventArgs e)
+        {
+            SatisYap("Nakit");
         }
     }
 

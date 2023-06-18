@@ -8,6 +8,9 @@
         <EntityTypeShape EntityType="Database1Model.Urun" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.Terazi" Width="1.5" PointX="2.75" PointY="0.875" />
         <EntityTypeShape EntityType="Database1Model.HizliUrunler" Width="1.5" PointX="2.75" PointY="2.5" />
+        <EntityTypeShape EntityType="Database1Model.Islem" Width="1.5" PointX="8" PointY="0.875" />
+        <EntityTypeShape EntityType="Database1Model.IslemOzet" Width="1.5" PointX="4.5" PointY="0.875" />
+        <EntityTypeShape EntityType="Database1Model.Satis" Width="1.5" PointX="6.25" PointY="0.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
